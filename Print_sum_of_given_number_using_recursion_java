@@ -1,0 +1,35 @@
+
+import java.util.*;
+class Rec
+{
+  
+    int ReturnSum(int num)
+    {
+        if(num==0)
+        {
+            return 0;
+        }
+           
+        return num+ReturnSum(num-1);  //num will be pending ReturnSum fun will called with num-1;
+                                        
+    }
+
+}
+
+public class Recursion_print_sum_of_N_Term {
+    public static void main(String args[])
+    {
+        int num;
+
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter the N tern:");
+        num=s.nextInt();
+
+        Rec r=new Rec();
+       int result= r.ReturnSum(num);        //whatever the result is will ne returned
+       System.out.println(result);
+
+    }
+
+    
+}
